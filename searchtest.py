@@ -35,6 +35,8 @@ class SearchTests(unittest.TestCase):
         search_field = driver.find_element(By.NAME, "q")
         search_field.send_keys('salt shaker')
         search_field.submit()
+        a =driver.find_element_by_id('a')
+        self.assertTrue(a.is)
         
         products = driver.find_elements(By.XPATH, '/html/body/div/div[2]/div[2]/div/div[2]/div[2]/div[3]/ul/li/a/img')
         
